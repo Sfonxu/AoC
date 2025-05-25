@@ -1,0 +1,13 @@
+use std::fs;
+
+fn main() {
+    let file_path = "/home/sfonxu/AoC/2015/day1/input";
+    let input = fs::read_to_string(file_path).expect("Cannot read file");
+
+    let mut floor = 0;
+    for c in input.chars() {
+	if c == '(' {floor += 1;}
+	if c == ')' {floor -= 1;}
+    }
+    println!("Santa is on floor {floor}");
+}
