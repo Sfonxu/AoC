@@ -1,7 +1,8 @@
 use std::fs;
+use std::path::Path;
 
 fn main() {
-    let file_path = "/home/sfonxu/AoC/2015/day1/input";
+    let file_path = Path::new("input");
     let input = fs::read_to_string(file_path).expect("Cannot read file");
     //Part one
     let mut floor = 0;

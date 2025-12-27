@@ -1,8 +1,9 @@
 use std::fs;
+use std::path::Path;
 
 fn main() {
     //part one
-    let path = "/home/sfonxu/AoC/2015/day2/input";
+    let path = Path::new("input");
     let input = fs::read_to_string(path)
 	.expect("Cannot read input");
     let mut sizes = Vec::<[i32; 3]>::new();

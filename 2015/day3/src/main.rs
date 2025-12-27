@@ -1,4 +1,5 @@
 use std::fs;
+use std::path::Path;
 use std::collections::HashMap;
 
 fn send_presents(map: &mut HashMap::<(i32, i32), i32>, c: char, position: &mut (i32, i32)) {
@@ -32,7 +33,7 @@ fn send_presents(map: &mut HashMap::<(i32, i32), i32>, c: char, position: &mut (
 }
 
 fn main() {
-    let path = "/home/sfonxu/AoC/2015/day3/input";
+    let path = Path::new("input");
     let input = fs::read_to_string(path).unwrap();
     let mut points: HashMap::<(i32,i32), i32> = HashMap::new();
     let mut position = (0,0);
