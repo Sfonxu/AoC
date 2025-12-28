@@ -1,3 +1,10 @@
+/*
+Based on:
+https://en.wikipedia.org/wiki/MD5#Algorithm
+https://dev.to/mdimovich/build-md5-from-scratch-with-rust-563e
+https://datatracker.ietf.org/doc/html/rfc1321
+*/
+
 fn split_to_u8 (input: u64) -> [u8; 8] {
     let output = [
 	input as u8,
